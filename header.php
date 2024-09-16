@@ -26,7 +26,7 @@
 			</div>
 			<a href="aboutus.php">About Us</a>
 			<a href="gallery.php">Gallery</a>
-			<a href="aboutus.php#call-contact">Contact</a>
-			<a href="login.php">Login</a>
+			<a href="contact.php">Contact</a>
+			<a href="login.php"><i class="fa fa-user"></i></a>
 		</div>
 	</nav>

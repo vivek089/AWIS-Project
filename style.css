@@ -226,30 +226,98 @@ footer {
 
 
 /*css for index.php*/
-.homepage{
-    padding: 25px;
-}
-
-.homepage h1{
+/* Center the H1 */
+.homepage h1 {
     text-align: center;
     word-spacing: 8px;
-    font-size:50px;
+    font-size: 50px;
     font-family: "Exo 2", sans-serif;
+    margin: 50px;
 }
 
-.homepage img{
-    padding: 50px;
-    float: right;
-    height: auto;
-    width: 500px;
-
-}
-.homepage p{
-    padding: 20px 50px 50px;
+.homepage p {
+    text-align: center;
+    word-spacing: 8px;
+    font-size: 30px;
     font-family: "Exo 2", sans-serif;
-    text-align: justify;
-    font-size: 35px;
-    text-justify:distribute;
+    margin: 30px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    width: 100%; /* Full viewport width */
+    height: 400px; /* Adjust height as needed */
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex; /* Enable flexbox for sliding effect */
+}
+
+/* Slide styling */
+.slides {
+    display: flex;
+    align-items: center;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    flex: 0 0 100%; /* Flex basis to take full width of the container */
+    transition: transform 1.5s ease-in-out; /* Smooth sliding transition */
+}
+
+.slides a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Keep text color */
+}
+
+.slides img {
+    width: 55%; /* Image takes up 55% of the width */
+    height: 100%; /* Full height of the slide */
+    object-fit: cover; /* Ensures the image covers the full height */
+}
+
+.text {
+    width: 45%; /* Text still takes up 45% of width */
+    color: white;
+    font-size: 28px;
+    padding: 20px; /* Adjust as necessary */
+    background: linear-gradient(to left, rgb(5, 35, 183), rgb(142, 4, 4)); /* Gradient */
+    display: flex;
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+    text-align: center; /* Center-align the text */
+    height: 100%;
+}
+
+/* Navigation buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 1;
+}
+
+.prev {
+    left: 0.5%; /* Position to the left of the image */
+}
+
+.next {
+    right: 0.5%; /* Position to the right of the image */
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.5); /* Darken background on hover */
+}
+
+/* Larger icons */
+.fa-angle-left, .fa-angle-right {
+    font-size: 50px; /* Larger icon size */
 }
 
 /*css for about.php*/

@@ -226,7 +226,6 @@ footer {
 
 
 /*css for index.php*/
-/* Center the H1 */
 .homepage h1 {
     text-align: center;
     word-spacing: 8px;
@@ -243,83 +242,59 @@ footer {
     margin: 30px;
 }
 
-/* Slideshow container */
-.slideshow-container {
-    position: relative;
-    width: 100%; /* Full viewport width */
+/* Ensure swiper container doesn't hide buttons */
+.swiper-container {
+    position: relative; /* Ensure container is relative to allow buttons to be positioned absolutely */
+    width: 100%;
     height: 400px; /* Adjust height as needed */
     margin: 0 auto;
-    overflow: hidden;
+    overflow: visible; /* Allow overflow to ensure buttons are not clipped */
     display: flex; /* Enable flexbox for sliding effect */
 }
 
-/* Slide styling */
-.slides {
+/* Swiper wrapper */
+.swiper-wrapper {
+    display: flex; /* Same as your current flexbox setup */
+    height: 100%;
+}
+
+/* Swiper slide (inherits your .slides styling) */
+.swiper-slide {
     display: flex;
     align-items: center;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    flex: 0 0 100%; /* Flex basis to take full width of the container */
+    width: 100%;
+    height: 100%;
     transition: transform 1.5s ease-in-out; /* Smooth sliding transition */
 }
 
-.slides a {
+.swiper-slide a {
     display: flex;
+    flex-direction: row; /* Aligns image and text side by side */
     width: 100%;
-    height: 100%;
-    text-decoration: none; /* Remove underline */
-    color: inherit; /* Keep text color */
+    height: 100%; /* Ensures both image and text stretch to fill the slide's height */
+    text-decoration: none; /* Remove underline from text */
+    color: inherit; /* Keep text color consistent */
 }
 
-.slides img {
+.swiper-slide img {
     width: 55%; /* Image takes up 55% of the width */
-    height: 100%; /* Full height of the slide */
-    object-fit: cover; /* Ensures the image covers the full height */
+    height: 100%; /* Image height matches the height of its parent container */
+    object-fit: cover; /* Ensures image covers its area without distortion */
 }
 
 .text {
-    width: 45%; /* Text still takes up 45% of width */
-    color: white;
     font-size: 28px;
-    padding: 20px; /* Adjust as necessary */
-    background: linear-gradient(to left, rgb(5, 35, 183), rgb(142, 4, 4)); /* Gradient */
+    width: 45%; /* Text takes up 45% of the width */
     display: flex;
-    justify-content: center; /* Center text horizontally */
-    align-items: center; /* Center text vertically */
-    text-align: center; /* Center-align the text */
-    height: 100%;
-}
-
-/* Navigation buttons */
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 10px;
+    flex-direction: column;
+    justify-content: center; 
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(to left, rgb(5, 35, 183), rgb(142, 4, 4)); /* Gradient background */
     color: white;
-    font-size: 50px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    z-index: 1;
+    height: 100%; 
+    box-sizing: border-box; 
 }
-
-.prev {
-    left: 0.5%; /* Position to the left of the image */
-}
-
-.next {
-    right: 0.5%; /* Position to the right of the image */
-}
-
-.prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.5); /* Darken background on hover */
-}
-
-/* Larger icons */
-.fa-angle-left, .fa-angle-right {
-    font-size: 50px; /* Larger icon size */
-}
-
 /*css for about.php*/
 
 #about-us{
